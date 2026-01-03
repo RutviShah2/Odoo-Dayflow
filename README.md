@@ -15,6 +15,10 @@ Modern HRMS frontend that showcases onboarding, attendance, leave, payroll, and 
 - Payroll breakdown with earnings/deductions and payslip history.
 - Employee directory (admin only) with search/filter.
 
+
+
+
+
 ## Tech Stack
 - Vite + React 18 + TypeScript
 - Tailwind CSS, shadcn/ui (Radix Primitives), Framer Motion accents
