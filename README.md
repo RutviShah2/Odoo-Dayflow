@@ -1,7 +1,6 @@
 # 🌊 Dayflow HRMS · React + Vite
 
 Modern HRMS frontend showcasing onboarding, attendance, leave, payroll, and approvals—wrapped in a polished marketing experience.
-
 > Built with **React 18**, **TypeScript**, **Vite**, **Tailwind CSS**, and **shadcn/ui**.
 
 ---
@@ -15,9 +14,22 @@ Modern HRMS frontend showcasing onboarding, attendance, leave, payroll, and appr
 - 💸 Payroll breakdown with earnings/deductions and payslip history.
 - 👥 Employee directory (admin only) with search/filter.
 
----
 
 ## 🧰 Tech Stack
+
+
+## Overview
+- Public landing page highlighting Dayflow and CTA to sign up/sign in.
+- Mock authentication with localStorage-backed sessions and demo accounts.
+- Role-aware UI (Admin vs Employee) driving navigation and quick actions.
+- Dashboard with activity feed, quick actions, and mock stats.
+- Attendance weekly calendar with status badges and detailed table.
+- Leave application workflow plus admin approvals view.
+- Payroll breakdown with earnings/deductions and payslip history.
+- Employee directory (admin only) with search/filter.
+
+
+## Tech Stack
 - Vite + React 18 + TypeScript
 - Tailwind CSS, shadcn/ui (Radix Primitives), Framer Motion accents
 - React Router v6 for routing
@@ -37,20 +49,20 @@ Prerequisite: Node.js 18+
 | Preview build     | `npm run preview`    | `pnpm run preview`   | `bun run preview`   |
 | Lint              | `npm run lint`       | `pnpm run lint`      | `bun run lint`      |
 
-Dev server: http://localhost:5173
-
----
 
 ## 🎭 Demo Accounts
 Use any password (6+ chars):
 
-- **Admin:** `rutvi.shah@dayflow.com`
-- **Employee:** `disu.makadiya@dayflow.com`
+- **Admin:** rutvi.shah@dayflow.com
+- **Employee:** disu.makadiya@dayflow.com
+## Demo Accounts
+Use any password with 6+ characters.
 
----
+- Admin: rutvi.shah@dayflow.com
+- Employee: disu.makadiya@dayflow.com
 
 ## 🗂️ Project Structure
-```
+
 src/
   pages/          // Landing, auth, dashboard, attendance, leave, payroll, employees, approvals, profile
   components/     // Layout, cards, shadcn/ui primitives
@@ -59,28 +71,28 @@ src/
   hooks/          // Reusable hooks (toast, mobile detection)
   lib/            // Utilities (class merging, helpers)
   types/          // Shared HRMS domain types
-```
 
----
 
 ## 🔍 Behavior Notes
 - Data is mock-only, seeded from `src/data/mockData.ts`; no backend calls yet.
 - Auth state persists in `localStorage` under `dayflow_user`.
 - Admin-only routes (Employees, Approvals) redirect non-admin users to the dashboard.
 
----
-
 ## 🛠️ Customization Ideas
 - Swap mock data for real APIs (wire through React Query).
 - Integrate your identity provider and remove demo shortcuts.
 - Extend payroll, attendance, and approvals with live data sources.
-
----
 
 ## 🤝 Contributing
 1. Fork & clone the repo.
 2. Create a feature branch: `git checkout -b feature/amazing-idea`.
 3. Commit changes: `git commit -m "Add amazing idea"`.
 4. Push & open a PR.
+
+
+## Customization Ideas
+- Replace mock data with real API calls (wire through React Query).
+- Hook up authentication to your identity provider and remove the demo shortcuts.
+- Extend payroll, attendance, and approvals to use live data sources.
 
 Happy building!
