@@ -50,6 +50,7 @@ npm run lint
 
 ## Demo Accounts
 Use any password with 6+ characters.
+
 - Admin: rutvi.shah@dayflow.com
 - Employee: disu.makadiya@dayflow.com
 
@@ -69,6 +70,8 @@ src/
 - Data is mock-only and seeded from src/data/mockData.ts; no backend calls yet.
 - Auth state persists in localStorage under `dayflow_user`.
 - Admin-only routes (Employees, Approvals) redirect non-admin users to the dashboard.
+
+
 
 ## Customization Ideas
 - Replace mock data with real API calls (wire through React Query).
