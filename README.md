@@ -1,8 +1,21 @@
-# Dayflow HRMS (React + Vite)
+# 🌊 Dayflow HRMS · React + Vite
 
-Modern HRMS frontend that showcases onboarding, attendance, leave, payroll, and approvals flows with a polished marketing page. Built with React, TypeScript, Vite, Tailwind CSS, and shadcn/ui components.
+Modern HRMS frontend showcasing onboarding, attendance, leave, payroll, and approvals—wrapped in a polished marketing experience.
+> Built with **React 18**, **TypeScript**, **Vite**, **Tailwind CSS**, and **shadcn/ui**.
+
+---
+
+## ✨ Highlights
+- 🏠 Public landing page with clear CTA (Sign up / Sign in).
+- 🔐 Role-aware UI (Admin vs Employee) drives navigation and quick actions.
+- 📊 Dashboard with activity feed, quick actions, and mock stats.
+- 🗓️ Attendance weekly calendar with status badges and a detailed table.
+- 📝 Leave workflow with employee requests and admin approvals.
+- 💸 Payroll breakdown with earnings/deductions and payslip history.
+- 👥 Employee directory (admin only) with search/filter.
 
 
+## 🧰 Tech Stack
 
 
 ## Overview
@@ -16,9 +29,6 @@ Modern HRMS frontend that showcases onboarding, attendance, leave, payroll, and 
 - Employee directory (admin only) with search/filter.
 
 
-
-
-
 ## Tech Stack
 - Vite + React 18 + TypeScript
 - Tailwind CSS, shadcn/ui (Radix Primitives), Framer Motion accents
@@ -26,58 +36,58 @@ Modern HRMS frontend that showcases onboarding, attendance, leave, payroll, and 
 - React Query provider ready for API integration
 - date-fns for date handling; lucide-react icons
 
-## Getting Started
-Prerequisites: Node.js 18+ and a package manager (npm, pnpm, or bun).
+---
 
-Install dependencies:
-- npm: `npm install`
-- pnpm: `pnpm install`
-- bun: `bun install`
+## 🚀 Getting Started
+Prerequisite: Node.js 18+
 
-Run the dev server:
-```
-npm run dev
-```
-The app defaults to http://localhost:5173.
+| Action            | npm                  | pnpm                 | bun                 |
+| ----------------- | -------------------- | -------------------- | ------------------- |
+| Install deps      | `npm install`        | `pnpm install`       | `bun install`       |
+| Run dev server    | `npm run dev`        | `pnpm run dev`       | `bun run dev`       |
+| Build             | `npm run build`      | `pnpm run build`     | `bun run build`     |
+| Preview build     | `npm run preview`    | `pnpm run preview`   | `bun run preview`   |
+| Lint              | `npm run lint`       | `pnpm run lint`      | `bun run lint`      |
 
-Build for production:
-```
-npm run build
-```
 
-Preview the production build locally:
-```
-npm run preview
-```
+## 🎭 Demo Accounts
+Use any password (6+ chars):
 
-Lint the project:
-```
-npm run lint
-```
-
+- **Admin:** rutvi.shah@dayflow.com
+- **Employee:** disu.makadiya@dayflow.com
 ## Demo Accounts
 Use any password with 6+ characters.
 
 - Admin: rutvi.shah@dayflow.com
 - Employee: disu.makadiya@dayflow.com
 
-## Project Structure
-```
-src/
-	pages/          // Route pages (landing, auth, dashboard, attendance, leave, payroll, employees, approvals, profile)
-	components/     // Layout, cards, and shadcn/ui primitives
-	contexts/       // Auth context with localStorage session
-	data/           // Mock data for users, attendance, leave, dashboard stats
-	hooks/          // Reusable hooks (toast, mobile detection)
-	lib/            // Utilities (class merging, helpers)
-	types/          // Shared HRMS domain types
-```
+## 🗂️ Project Structure
 
-## Behavior Notes
-- Data is mock-only and seeded from src/data/mockData.ts; no backend calls yet.
-- Auth state persists in localStorage under `dayflow_user`.
+src/
+  pages/          // Landing, auth, dashboard, attendance, leave, payroll, employees, approvals, profile
+  components/     // Layout, cards, shadcn/ui primitives
+  contexts/       // Auth context with localStorage session
+  data/           // Mock data (users, attendance, leave, dashboard stats)
+  hooks/          // Reusable hooks (toast, mobile detection)
+  lib/            // Utilities (class merging, helpers)
+  types/          // Shared HRMS domain types
+
+
+## 🔍 Behavior Notes
+- Data is mock-only, seeded from `src/data/mockData.ts`; no backend calls yet.
+- Auth state persists in `localStorage` under `dayflow_user`.
 - Admin-only routes (Employees, Approvals) redirect non-admin users to the dashboard.
 
+## 🛠️ Customization Ideas
+- Swap mock data for real APIs (wire through React Query).
+- Integrate your identity provider and remove demo shortcuts.
+- Extend payroll, attendance, and approvals with live data sources.
+
+## 🤝 Contributing
+1. Fork & clone the repo.
+2. Create a feature branch: `git checkout -b feature/amazing-idea`.
+3. Commit changes: `git commit -m "Add amazing idea"`.
+4. Push & open a PR.
 
 
 ## Customization Ideas
@@ -85,3 +95,4 @@ src/
 - Hook up authentication to your identity provider and remove the demo shortcuts.
 - Extend payroll, attendance, and approvals to use live data sources.
 
+Happy building!
