@@ -1,73 +1,77 @@
-# Welcome to your Lovable project
+# Dayflow HRMS (React + Vite)
 
-## Project info
+Modern HRMS frontend that showcases onboarding, attendance, leave, payroll, and approvals flows with a polished marketing page. Built with React, TypeScript, Vite, Tailwind CSS, and shadcn/ui components.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Overview
+- Public landing page highlighting Dayflow and CTA to sign up/sign in.
+- Mock authentication with localStorage-backed sessions and demo accounts.
+- Role-aware UI (Admin vs Employee) driving navigation and quick actions.
+- Dashboard with activity feed, quick actions, and mock stats.
+- Attendance weekly calendar with status badges and detailed table.
+- Leave application workflow plus admin approvals view.
+- Payroll breakdown with earnings/deductions and payslip history.
+- Employee directory (admin only) with search/filter.
 
-## How can I edit this code?
+## Tech Stack
+- Vite + React 18 + TypeScript
+- Tailwind CSS, shadcn/ui (Radix Primitives), Framer Motion accents
+- React Router v6 for routing
+- React Query provider ready for API integration
+- date-fns for date handling; lucide-react icons
 
-There are several ways of editing your application.
+## Getting Started
+Prerequisites: Node.js 18+ and a package manager (npm, pnpm, or bun).
 
-**Use Lovable**
+Install dependencies:
+- npm: `npm install`
+- pnpm: `pnpm install`
+- bun: `bun install`
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Run the dev server:
+```
 npm run dev
 ```
+The app defaults to http://localhost:5173.
 
-**Edit a file directly in GitHub**
+Build for production:
+```
+npm run build
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Preview the production build locally:
+```
+npm run preview
+```
 
-**Use GitHub Codespaces**
+Lint the project:
+```
+npm run lint
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Demo Accounts
+Use any password with 6+ characters.
+- Admin: rutvi.shah@dayflow.com
+- Employee: disu.makadiya@dayflow.com
 
-## What technologies are used for this project?
+## Project Structure
+```
+src/
+	pages/          // Route pages (landing, auth, dashboard, attendance, leave, payroll, employees, approvals, profile)
+	components/     // Layout, cards, and shadcn/ui primitives
+	contexts/       // Auth context with localStorage session
+	data/           // Mock data for users, attendance, leave, dashboard stats
+	hooks/          // Reusable hooks (toast, mobile detection)
+	lib/            // Utilities (class merging, helpers)
+	types/          // Shared HRMS domain types
+```
 
-This project is built with:
+## Behavior Notes
+- Data is mock-only and seeded from src/data/mockData.ts; no backend calls yet.
+- Auth state persists in localStorage under `dayflow_user`.
+- Admin-only routes (Employees, Approvals) redirect non-admin users to the dashboard.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Customization Ideas
+- Replace mock data with real API calls (wire through React Query).
+- Hook up authentication to your identity provider and remove the demo shortcuts.
+- Extend payroll, attendance, and approvals to use live data sources.
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
