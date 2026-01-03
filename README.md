@@ -2,6 +2,9 @@
 
 Modern HRMS frontend that showcases onboarding, attendance, leave, payroll, and approvals flows with a polished marketing page. Built with React, TypeScript, Vite, Tailwind CSS, and shadcn/ui components.
 
+
+
+
 ## Overview
 - Public landing page highlighting Dayflow and CTA to sign up/sign in.
 - Mock authentication with localStorage-backed sessions and demo accounts.
